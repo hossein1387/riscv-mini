@@ -12,7 +12,6 @@ class ALUTester(alu: => ALU)(implicit p: config.Parameters) extends BasicTester 
   val ctrl = Module(new Control)
   val xlen = p(XLEN)
 
-  val Hossein
   val (cntr, done) = Counter(true.B, insts.size)
   val rs1  = Seq.fill(insts.size)(rnd.nextInt()) map toBigInt
   val rs2  = Seq.fill(insts.size)(rnd.nextInt()) map toBigInt
